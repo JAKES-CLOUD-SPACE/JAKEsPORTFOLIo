@@ -1,0 +1,104 @@
+/* src/components/Contact.css */
+
+/* General styling for the contact section */
+.contact-section {
+    background-color: #354f52;  /* Light gray background */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-container {
+    background-color: #2f3e46;  /* White background for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;  /* Rounded corners */
+  }
+  
+  h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #0056b3;  /* Highlight border when focused */
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;  /* Make the message box taller */
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;  /* Center the button */
+  }
+  
+  .submit-btn:hover {
+    background-color: #004080;  /* Darker blue on hover */
+  }
+  
+  /* Responsive design: make form smaller on mobile */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    input, textarea {
+      font-size: 0.9rem;
+    }
+  
+    .submit-btn {
+      font-size: 0.9rem;
+      padding: 10px 18px;
+    }
+  }
+  

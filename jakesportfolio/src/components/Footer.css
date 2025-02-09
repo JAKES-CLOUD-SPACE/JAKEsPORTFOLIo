@@ -1,0 +1,58 @@
+/* src/components/Footer.css */
+
+/* General footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;  /* Space between footer items */
+    align-items: center;
+    padding: 20px;
+    background-color: #354f52;
+    color: white;
+    width: 100%;  /* Ensure footer spans the full width */
+    box-sizing: border-box;  /* Include padding in width calculation */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;  /* Space out the footer content */
+    width: 100%;  /* Ensure the content spans the full width */
+  }
+  
+  .footer-links {
+    display: flex; /* Use flexbox for links */
+    gap: 20px;  /* Add spacing between links */
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #f4f4f4; /* Change color on hover */
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+    text-align: right;  /* Align the text to the right */
+  }
+  
+  @media screen and (max-width: 768px) {
+    footer {
+      flex-direction: column;  /* Stack footer content vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;  /* Stack links vertically */
+      gap: 10px;  /* Space out the links vertically */
+      margin-bottom: 20px; /* Add some space below the links */
+    }
+  
+    .footer-text {
+      text-align: center;  /* Center-align the text */
+    }
+  }
+  
