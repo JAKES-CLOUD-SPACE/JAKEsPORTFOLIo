@@ -1,6 +1,6 @@
 // src/components/Contact.jsx
 import React, { useState } from "react";
-import "./Contact.css"; // Import the CSS for the Contact page
+import "./Contact.css";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form Submitted!");
-    // Add form submission logic here
+    // Add form submission logic so data has somewhere to go
   };
 
   return (
