@@ -1,38 +1,155 @@
-.App {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 50px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.project a {
+  display: block;
+  margin-top: 10px;
+}
+/* src/App.css */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style for the Home component */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.home-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home-boxes .box a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
 }
