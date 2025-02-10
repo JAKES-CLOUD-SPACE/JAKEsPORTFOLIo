@@ -11,7 +11,7 @@ const Footer = () => {
           <img 
               src={"/src/assets/icons8-github-100.png"} 
               alt="Github logo" 
-              style={{ width: '80px', height: '80px', objectFit: 'contain' }} // Adjust size as needed
+              style={{ width: '80px', height: '80px', objectFit: 'contain' }}
             />
             </Link>
 
@@ -19,7 +19,7 @@ const Footer = () => {
           <img 
               src={"/src/assets/Spotify_Primary_Logo_RGB_Black.png"} 
               alt="Spotify Logo" 
-              style={{ width: '80px', height: '80px', objectFit: 'contain' }} // Adjust size as needed
+              style={{ width: '80px', height: '80px', objectFit: 'contain' }}
             />
             </Link>
 

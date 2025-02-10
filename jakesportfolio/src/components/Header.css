@@ -15,25 +15,25 @@ header {
     padding: 0 20px 0 0;
   }
   
-  nav { /* Push the nav items to the bottom of the header */
+  nav {
     display: flex;
-    justify-content: space-around;  /* Distribute nav items evenly */
+    justify-content: space-around;
   }
   
   .nav-list {
-    list-style: none; /* Remove the default list styling */
-    display: flex;    /* Make the list items appear in a row */
+    list-style: none;
+    display: flex; 
     margin: 0;
     padding: 0;
-    width: 100%;       /* Allow the list to span the full width */
+    width: 100%;
   }
   
   .nav-list li {
-    margin-right: 40px;  /* Add space between each nav item */
+    margin-right: 40px;
   }
   
   .nav-list li:last-child {
-    margin-right: 20px; /* Remove right margin from the last item */
+    margin-right: 20px;
   }
   
   .nav-list a {
@@ -45,40 +45,39 @@ header {
   }
   
   .nav-list a:hover {
-    color: #02652b; /* Change color on hover */
+    color: #02652b;
   }
 
-/* Media query for small screens (e.g., mobile) */
 @media screen and (max-width: 768px) {
     nav {
-      flex-direction: column;  /* Stack the navigation items vertically */
-      align-items: center;     /* Center the items horizontally */
+      flex-direction: column; 
+      align-items: center; 
     }
   
     .nav-list {
-      flex-direction: column; /* Make the list items appear in a column */
+      flex-direction: column;
     }
   
     .nav-list li {
-      margin: 10px;  /* Add space between each nav item */
+      margin: 10px;
     }
   }
 @media screen and (max-width: 1028px) {
   header {
-    flex-direction: column;      /* Stack header items vertically */
-    height: auto;                /* Let the height adjust automatically */
+    flex-direction: column;  
+    height: auto;  
   }
     nav {
-      flex-direction: column;  /* Stack the navigation items vertically */
-      align-items: center;     /* Center the items horizontally */
+      flex-direction: column; 
+      align-items: center; 
     }
   
     .nav-list {
-      flex-wrap: wrap; /* Make the list items appear in a column */
+      flex-wrap: wrap; 
     }
   
     .nav-list li {
-      margin: 20px;  /* Add space between each nav item */
+      margin: 20px;
     }
   }
   

@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form Submitted!");
-    // Add form submission logic so data has somewhere to go
+    // need to add form submission logic so data has somewhere to go
   };
 
   return (
