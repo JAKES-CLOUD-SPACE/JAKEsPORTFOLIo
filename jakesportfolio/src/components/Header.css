@@ -10,12 +10,12 @@ header {
   }
   
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    padding: 0 20px 0 0;
   }
   
-  nav {
-    margin-top: auto;  /* Push the nav items to the bottom of the header */
+  nav { /* Push the nav items to the bottom of the header */
     display: flex;
     justify-content: space-around;  /* Distribute nav items evenly */
   }
@@ -26,16 +26,14 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;       /* Allow the list to span the full width */
-    justify-content: bottom; 
-    bottom:0%;
   }
   
   .nav-list li {
-    margin-right: 80px;  /* Add space between each nav item */
+    margin-right: 40px;  /* Add space between each nav item */
   }
   
   .nav-list li:last-child {
-    margin-right: 20; /* Remove right margin from the last item */
+    margin-right: 20px; /* Remove right margin from the last item */
   }
   
   .nav-list a {
@@ -62,8 +60,25 @@ header {
     }
   
     .nav-list li {
-      margin: 10px 0;  /* Add space between each nav item */
+      margin: 10px;  /* Add space between each nav item */
     }
   }
+@media screen and (max-width: 1028px) {
+  header {
+    flex-direction: column;      /* Stack header items vertically */
+    height: auto;                /* Let the height adjust automatically */
+  }
+    nav {
+      flex-direction: column;  /* Stack the navigation items vertically */
+      align-items: center;     /* Center the items horizontally */
+    }
   
+    .nav-list {
+      flex-wrap: wrap; /* Make the list items appear in a column */
+    }
+  
+    .nav-list li {
+      margin: 20px;  /* Add space between each nav item */
+    }
+  }
   
