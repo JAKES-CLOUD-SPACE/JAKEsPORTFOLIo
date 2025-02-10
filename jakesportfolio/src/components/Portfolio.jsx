@@ -6,7 +6,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Money Maker',
-      image: '/src/assets/moneymaker.png',
+      image: '/moneymaker.png',
       githubLink: 'https://github.com/vincentt94/Money-Maker',
       deployedLink: '',
     },
@@ -18,7 +18,7 @@ const Portfolio = () => {
     },
     {
       title: 'README Generator',
-      image: '/src/assets/photo1.png',
+      image: '/photo1.png',
       githubLink: 'https://github.com/JAKES-CLOUD-SPACE/challenge-7',
       deployedLink: '',
     },

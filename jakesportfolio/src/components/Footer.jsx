@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-links">
           <Link to="https://github.com/JAKES-CLOUD-SPACE" target="_blank">   
           <img 
-              src={"/src/assets/icons8-github-100.png"} 
+              src={"/icons8-github-100.png"} 
               alt="Github logo" 
               style={{ width: '80px', height: '80px', objectFit: 'contain' }}
             />
@@ -17,7 +17,7 @@ const Footer = () => {
 
           <Link to="https://open.spotify.com/user/vu80z36xzf7l3qm7d4cvnit55?si=593a7e8e5bce4ffb" target="_blank">   
           <img 
-              src={"/src/assets/Spotify_Primary_Logo_RGB_Black.png"} 
+              src={"/Spotify_Primary_Logo_RGB_Black.png"} 
               alt="Spotify Logo" 
               style={{ width: '80px', height: '80px', objectFit: 'contain' }}
             />
