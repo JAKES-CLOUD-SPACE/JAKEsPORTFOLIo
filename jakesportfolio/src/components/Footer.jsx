@@ -7,12 +7,25 @@ const Footer = () => {
     <footer>
       <div className="footer-content">
         <div className="footer-links">
-          <Link to="https://github.com/JAKES-CLOUD-SPACE" target="_blank">GitHub</Link>
-          <Link to="https://www.linkedin.com/in/your-profile/" target="_blank">LinkedIn</Link>
-          <Link to="https://twitter.com/your-profile" target="_blank">Twitter</Link>
+          <Link to="https://github.com/JAKES-CLOUD-SPACE" target="_blank">   
+          <img 
+              src={"/src/assets/icons8-github-100.png"} 
+              alt="Github logo" 
+              style={{ width: '80px', height: '80px', objectFit: 'contain' }} // Adjust size as needed
+            />
+            </Link>
+
+          <Link to="https://open.spotify.com/user/vu80z36xzf7l3qm7d4cvnit55?si=593a7e8e5bce4ffb" target="_blank">   
+          <img 
+              src={"/src/assets/Spotify_Primary_Logo_RGB_Black.png"} 
+              alt="Spotify Logo" 
+              style={{ width: '80px', height: '80px', objectFit: 'contain' }} // Adjust size as needed
+            />
+            </Link>
+
         </div>
         <div className="footer-text">
-          <p>© 2025 Jake's Portfolio</p>
+          <p>© 2025 Jake Ringate's Portfolio</p>
         </div>
       </div>
     </footer>

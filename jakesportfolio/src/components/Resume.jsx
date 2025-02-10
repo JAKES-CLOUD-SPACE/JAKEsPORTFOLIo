@@ -1,18 +1,18 @@
-// src/components/Resume.js
 import React from 'react';
 
 const Resume = () => {
   return (
-    <section className="contact-section">
-    <div className="contact-container">
+    <section className="resume-section">
+    <div className="resume-container">
       <h1>My Resume</h1>
-      <a href="/path/to/resume.pdf" download>You Can Download My Resume Here</a>
-      <h2>SKILLS</h2>
-      <ul>
-        <li>Proficienct in HTML, CSS, JAVASCRIPT, REACT,</li>
-        <li>Strong attention to detail</li>
-        <li>The love for problem solving</li>
-      </ul>
+      <a href="/src/assets/jake.pdf" download>You Can Download My Resume Here</a>
+      <iframe 
+        src="/src/assets/jake.pdf" 
+        width="100%" 
+        height="800px" 
+        title="Resume"
+      >        Sorry, your browser doesn't support embedded PDFs.
+      </iframe>
     </div>
     </section>
   );

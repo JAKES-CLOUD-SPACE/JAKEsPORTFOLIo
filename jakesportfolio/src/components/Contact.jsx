@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React, { useState } from "react";
 import "./Contact.css";
 
@@ -24,8 +23,7 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <div className="contact-container">
         <h3>Contact Me</h3>
-        <p>I'd love to hear from you! Fill out the form below or reach me via email.</p>
-
+        <p>Feel free to contact me about any questions! Fill out the form below.</p>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
