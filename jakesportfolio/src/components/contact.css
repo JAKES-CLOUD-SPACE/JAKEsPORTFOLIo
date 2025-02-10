@@ -1,3 +1,4 @@
+--adding css for contact page
 .resume-section {
     background-color: #354f52;
     padding: 40px 20px;
@@ -14,6 +15,8 @@
     width: 100%;
     border-radius: 8px; 
   }
+
+
 .contact-section {
     background-color: #354f52;
     padding: 40px 20px;
