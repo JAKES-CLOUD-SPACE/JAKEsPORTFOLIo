@@ -9,7 +9,7 @@ const Project = ({ title, image, githubLink, deployedLink }) => {
         <div className="project-links">
           {deployedLink && (
             <a href={deployedLink} target="_blank" rel="noopener noreferrer">
-              Live Demo
+              Deployed Link
             </a>
           )}
           <a href={githubLink} target="_blank" rel="noopener noreferrer">

@@ -28,7 +28,36 @@ const Portfolio = () => {
       githubLink: 'https://github.com/JAKES-CLOUD-SPACE/Challenge-9',
       deployedLink: '',
     },
-
+    {
+      title: 'Github Profile Search',
+      image: '/githubsearch.png',
+      githubLink: 'https://github.com/JAKES-CLOUD-SPACE/CandidateSearch',
+      deployedLink: '',
+    },
+    {
+      title: 'Secret Notes',
+      image: '/notes.png',
+      githubLink: 'https://github.com/JAKES-CLOUD-SPACE/SecretNotes',
+      deployedLink: '',
+    },
+    {
+      title: 'Social Networking API',
+      image: '/17-nosql-homework-demo-04.gif',
+      githubLink: 'https://github.com/JAKES-CLOUD-SPACE/Social-Network-API',
+      deployedLink: '',
+    },
+    {
+      title: 'API Book List',
+      image: '/bookapi.gif',
+      githubLink: 'https://github.com/JAKES-CLOUD-SPACE/API-Booklist',
+      deployedLink: 'https://api-booklist.onrender.com',
+    },
+    {
+      title: 'Play Planner',
+      image: 'https://ih1.redbubble.net/image.2940964139.0114/raf,360x360,075,t,fafafa:ca443f4786.u1.jpg',
+      githubLink: 'https://github.com/rasersharpe/play-planner',
+      deployedLink: 'https://playplanner.onrender.com',
+    },
   ];
 
   return (
