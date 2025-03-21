@@ -15,7 +15,7 @@
 this is a website showcasing my portfolio
 
 ## Installation
-none visit it at jakeringateportfolio.netlify.app
+none visit it at https://jakeringateportfolio.netlify.app/
 
 ## Usage
 Be able to see my accomplishments and Achivements for my coding career
