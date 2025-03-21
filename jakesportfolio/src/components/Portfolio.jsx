@@ -5,6 +5,12 @@ import './Project.css';
 const Portfolio = () => {
   const projects = [
     {
+      title: 'CTRL-ATL-SHIFT',
+      image: '/crtl-alt-shift.png',
+      githubLink: 'https://github.com/TristanPPersaud/CTRL-ALT_SHIFTS',
+      deployedLink: 'https://ctrl-alt-shifts-8m9w.onrender.com',
+    },
+    {
       title: 'Money Maker',
       image: '/moneymaker.png',
       githubLink: 'https://github.com/vincentt94/Money-Maker',
@@ -54,7 +60,7 @@ const Portfolio = () => {
     },
     {
       title: 'Play Planner',
-      image: 'https://ih1.redbubble.net/image.2940964139.0114/raf,360x360,075,t,fafafa:ca443f4786.u1.jpg',
+      image: 'doom.png',
       githubLink: 'https://github.com/rasersharpe/play-planner',
       deployedLink: 'https://playplanner.onrender.com',
     },
