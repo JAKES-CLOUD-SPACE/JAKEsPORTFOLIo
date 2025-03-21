@@ -32,7 +32,7 @@ const Portfolio = () => {
       title: 'Github Profile Search',
       image: '/githubsearch.png',
       githubLink: 'https://github.com/JAKES-CLOUD-SPACE/CandidateSearch',
-      deployedLink: '',
+      deployedLink: 'https://candidatesearchgithub.netlify.app/',
     },
     {
       title: 'Secret Notes',
