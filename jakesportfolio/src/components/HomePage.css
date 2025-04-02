@@ -1,0 +1,930 @@
+.home-container {
+  min-height: 100vh; /* Change from fixed height to minimum height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px;
+  position: relative;
+  overflow: visible; /* Allow content to flow beyond viewport */
+  padding-bottom: 1170px; /* Add space between content and footer */
+}
+
+.home-content {
+  position: absolute;
+  top: 100px; /* Position at top */
+  right: 80px; /* Position at right */
+  z-index: 100; /* Ensure it's above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right */
+  width: 40%; /* Adjust width as needed */
+  text-align: right;
+}
+
+/* Create a container for the paragraph and button */
+.paragraph-container {
+  position: absolute;
+  top: -280px;
+  right: 80px;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+/* Position for the h1 containing Designer and Developer */
+.creative h1 {
+  position: absolute;
+  top: calc(80px + 200px + -10px); /* Position below creative text: circle top + circle height + spacing */
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: left;
+  margin: 0;
+  z-index: 5;
+  transition: all 0.3s ease;
+  left: 250px;
+  transform: translateX(-50%); /* Center horizontally */
+  text-shadow: none;
+}
+
+/* Stretch the words vertically */
+.creative h1 span {
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.3;
+  transform: scaleY(2); /* Vertically stretch the text */
+  transform-origin: top;
+}
+
+/* Style for the ampersand (&) */
+.creative h1 .ampersand {
+  font-size: 2rem; /* One-fourth the size of the main text */
+  line-height: 1.3; /* Prevent extra spacing */
+  display: inline-block;
+  position: relative;
+  transform: scaleY(0.5);
+  top: 15px; /* Adjust to move it higher */
+  font-family: 'Typographica', sans-serif;
+}
+
+/* Style specifically the paragraph inside home-content */
+.home-content p {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0; /* Adds space between paragraph and button */
+  font-family: 'Typographica', sans-serif;
+}
+
+/* Keep button attached to paragraph */
+.home-content .cta-button {
+  margin-left: auto;
+  margin-right: 0;
+  align-self: flex-end;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  text-shadow: none;
+}
+
+h1 span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.availability {
+  position: absolute; /* Changed from absolute to fixed */
+  top: 80px; /* Position right below the header/logo */
+  left: 40px; /* Align with the left padding of the header */
+  margin: 0;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.date-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 15px; /* Add padding to ensure content stays inside */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  box-shadow: 
+    0 0 15px 5px rgba(240, 165, 0, 0.7),
+    0 0 30px 10px rgba(240, 165, 0, 0.5),
+    0 0 45px 20px rgba(240, 165, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Optional: enhance glow on hover */
+.date-circle:hover {
+  box-shadow: 
+    0 0 20px 7px rgba(240, 165, 0, 0.7),
+    0 0 40px 15px rgba(240, 165, 0, 0.5),
+    0 0 60px 25px rgba(240, 165, 0, 0.3);
+}
+
+.date {
+  font-size: 2.5rem; /* Slightly reduced */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.availability-text {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  text-transform: uppercase;
+  font-weight: bold !important; /* Ensure the text is bold */
+  line-height: 1.2; /* Tighter line height */
+  margin-top: 5px;
+  word-wrap: break-word;
+  max-width: 90%; /* Prevent text from touching the edges */
+  display: block; /* Ensure it takes the full width */
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+/* Default style for the buttons */
+.cta-button {
+  margin-left: auto;
+  margin-right: 40px;
+  align-self: flex-end;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  text-transform: uppercase;
+  font-size: clamp(0.9rem, 1vw + 0.4rem, 1.2rem); /* Responsive font size */
+  font-weight: bold !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: #f0a500;
+  box-shadow: 
+    0 0 15px 5px rgba(240, 165, 0, 0.7),
+    0 0 30px 10px rgba(240, 165, 0, 0.5),
+    0 0 45px 20px rgba(240, 165, 0, 0.3); /* Three-layer glow effect */
+  transform: scale(1.02);
+}
+
+/* Default style for large screens - buttons are stacked vertically */
+.home-content .cta-button {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  align-self: flex-end;
+  margin-bottom: 0px;
+  width: auto;
+}
+
+.home-content .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Position for the creative text */
+.creative-text {
+  position: absolute;
+  top: calc(80px + 200px + -50px); /* Circle's top (80px) + height (200px) + extra spacing (20px) */
+  left: 140px;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 300px;
+  z-index: 9;
+  
+}
+
+.creative-text svg {
+  overflow: visible;
+  width: 300px; /* Ensure all letters are visible */
+  height: 100px; /* Adjust height for proper curvature */
+  font-family: 'Typographica', sans-serif;
+}
+
+.creative-text .curved-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  fill: white; /* For SVG text */
+  filter: none; /* No glow */
+  letter-spacing: 0.15em; /* Adjust letter spacing */
+  font-family: 'Typographica', serif; /* Primary with fallback */
+}
+
+.curved-text {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  width: 200px;
+}
+
+.curved-text span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 
+    0 0 7px #f0a500,
+    0 0 15px #f0a500;
+  position: absolute;
+  width: 25px; /* Individual width for each character */
+  height: 30px;
+  transform-origin: center 70px;
+  transform-style: preserve-3d;
+  top: 0;
+  font-family: 'Typographica', serif !important; /* Use important to override any conflicts */
+}
+
+/* Position each character with increased spacing */
+.curved-text span:nth-child(1) { left: 8%; transform: rotate(-28deg) translateY(70px); }
+.curved-text span:nth-child(2) { left: 22%; transform: rotate(-21deg) translateY(70px); }
+.curved-text span:nth-child(3) { left: 36%; transform: rotate(-14deg) translateY(70px); }
+.curved-text span:nth-child(4) { left: 50%; transform: rotate(-7deg) translateY(70px); }
+.curved-text span:nth-child(5) { left: 64%; transform: rotate(0deg) translateY(70px); }
+.curved-text span:nth-child(6) { left: 78%; transform: rotate(7deg) translateY(70px); }
+.curved-text span:nth-child(7) { left: 92%; transform: rotate(14deg) translateY(70px); }
+.curved-text span:nth-child(8) { left: 106%; transform: rotate(21deg) translateY(70px); }
+
+/* Import the Typographica font */
+@font-face {
+  font-family: 'Typographica';
+  src: url('../assets/fonts/Typographica.woff2') format('woff2'),
+       url('../assets/fonts/Typographica.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Ensures text is visible while font loads */
+}
+
+/* Project section styling - centered on page */
+.projects-section {
+  top: -50px;
+  width: 120%;
+  max-width: 1200px;
+  right: 50%;
+  box-sizing: border-box;
+  position: relative; /* Add positioning context */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+}
+
+.projects-section h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* Add padding to the projects grid to ensure spacing */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px; /* Control maximum width of the grid */
+  align-items: center;
+  padding: 0 20px; /* Add horizontal padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Ensure project wrappers span the full width and center content */
+.project-wrapper {
+  display: flex;
+  justify-content: space-between; /* Distribute projects evenly */
+  align-items: center;
+  margin-bottom: 40px; /* Add spacing between projects */
+  position: relative;
+  width: 113%;
+  padding: 0 5%; /* Add padding to ensure space from edges */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Ensure the project card has no padding or background color */
+.project-card {
+  width: 500px !important; /* Increased from 400px to 500px (+100px) */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  margin: 0 -20px 0;
+  box-shadow: 0 0 15px 5px rgba(240, 165, 0, 0.7);
+}
+
+/* Override for specific project cards with a more specific selector */
+.project-wrapper .project-card.project-left,
+.project-wrapper .project-card.project-right,
+.project-wrapper .project-card.project-center {
+  width: 700px !important; /* Increased to 700px */
+  max-width: 1100px !important; /* Increased max-width as well */
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 5px rgba(240, 165, 0, 0.7);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Make sure images scale properly */
+.project-image {
+  width: 125%;
+  height: 200px;
+  object-fit: cover;
+  object-position: left;
+  display: block;
+  border: none;
+  margin: 0 -20px 0;
+  border-radius: 0;
+}
+
+/* Left-aligned project */
+.project-wrapper-left {
+  justify-content: center; /* Align to the left */
+  margin-left: 20px;
+    margin-right: 0px;
+}
+
+/* Right-aligned project */
+.project-wrapper-right {
+  justify-content: flex-end; /* Align to the right */
+}
+
+/* Center-aligned project */
+.project-wrapper-center {
+  justify-content: center; /* Align to the center */
+  margin-left: 20px;
+    margin-right: 0px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .project-wrapper-left {
+    justify-content: center; /* Push left-aligned projects toward the center */
+  }
+
+  .project-wrapper-right {
+    justify-content: center; /* Push right-aligned projects toward the center */
+  }
+
+  .project-card {
+    width: 60vw !important; /* Slightly wider percentage of viewport width */
+  }
+  
+  .project-card.project-left,
+  .project-card.project-right,
+  .project-card.project-center {
+    width: 60vw !important; /* Match the wider percentage */
+  }
+  
+  .project-card.project-left,
+  .project-card.project-right,
+  .project-card.project-center {
+    width: 45vw; /* Slightly wider on medium screens */
+  }
+  
+  .project-card.project-left, .project-info1 {
+    right: 8vw; /* Adjust spacing for medium screens */
+  }
+  
+  .project-card.project-right, .project-info2 {
+    left: 8vw;
+  }
+}
+
+
+/* Project wrapper - contains both card and info */
+.project-wrapper {
+  position: relative !important;
+  z-index: 90 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.project-wrapper-left {
+  justify-content: center; /* Align to left */
+}
+
+.project-wrapper-right {
+  justify-content: flex-end; /* Align to right */
+}
+
+.project-wrapper-center {
+  justify-content: center; /* Align to center */
+}
+
+/* Project info styling - add explicit styles for the content */
+.project-info {
+  background-color: rgba(240, 164, 0, 0.665); /* Semi-transparent dark background */
+  color: white; /* White text color */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 5px 0 15px 5px rgba(240, 165, 0, 0.7); /* Add a glowing effect */
+  font-size: 1rem; /* Adjust font size */
+  line-height: 1.5; /* Improve readability */
+  text-align: center; /* Align text to the left */
+  margin: 10px 0; /* Add spacing between info boxes */
+  width: 95%; /* Slightly wider percentage */
+  max-width: 800px; /* Increased from 700px to 800px */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Make title stand out more */
+.project-info h3 {
+  color: white !important;
+  font-size: 1.8rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  display: block !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Add glow to text */
+}
+
+/* Make description stand out more */
+.project-info p {
+  color: #fff !important; /* Your theme's amber color */
+  font-size: 1.1rem !important;
+  margin: 0 !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  display: block !important;
+  text-shadow: 0 0 8px rgba(240, 165, 0, 0.7) !important; /* Add glow to text */
+}
+
+.project-wrapper-right .project-info {
+  margin-left: 0;
+  margin-right: 20px;
+  order: -1; /* Put info before card for right-aligned projects */
+}
+
+/* Project cards - ensure consistent alignment */
+.project-card.project-left,
+.project-card.project-right,
+.project-card.project-center {
+  height: 200px;
+  margin: 10px;
+  width: 550px !important; /* Increased from 450px to 550px (+100px) */
+  max-width: 900px !important; /* Increased from 800px to 900px */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 5px rgba(240, 165, 0, 0.7);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.project-card.project-left, .project-info1 {
+  margin-left: 20px;
+  position: relative;
+  right: 65%;
+}
+
+.project-card.project-right, .project-info2 {
+  position: relative;
+  left: 45%;
+}
+
+.project-card.project-center, .project-info3 {
+  margin-left: 20px;
+  position: relative;
+  right: 65%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1028px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1 span {
+    font-size: 1.5rem;
+  }
+
+  .availability {
+    top: 65px; /* Slightly higher position for mobile */
+    left: 20px; /* Match the mobile padding */
+  }
+
+  .date-circle {
+    width: 100px; /* Slightly larger than 80px for better fit */
+    height: 100px;
+    padding: 8px; /* Adjusted padding */
+  }
+
+  .date {
+    font-size: 1.3rem; /* Smaller than current 1.2rem */
+    margin-bottom: 2px; /* Reduced spacing */
+    line-height: 1; /* Tighter line height */
+  }
+
+  .availability-text {
+    font-size: 0.6rem; /* Smaller than current 0.7rem */
+    margin-top: 2px; /* Reduced spacing */
+    line-height: 1; /* Tighter line height */
+    max-width: 95%; /* Ensure text stays contained */
+    word-break: break-word; /* Force text to break if needed */
+  }
+
+  .creative-text {
+    top: calc(65px + 100px + -30px); /* Adjusted for smaller circle */
+    width: 200px;
+    left: 70px;
+  }
+  
+  .creative-text svg {
+    width: 200px;
+    height: 70px;
+  }
+  
+  .creative-text .curved-text {
+    font-size: 1.8rem;
+    letter-spacing: 0.12em;
+  }
+  
+  /* For centered version */
+  .availability.centered + .creative-text {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .creative h1 {
+    top: calc(80px + 200px + -120px); /* Circle top + circle height + spacing */
+    left: 184px;
+    font-size: 4rem;
+  }
+
+  .paragraph-container {
+    width: 90%;
+    top: -180px;
+    right: 20px;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .home-content .button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Changed from wrap to nowrap to prevent wrapping */
+    gap: 5px; /* Reduced from 10px to 5px to minimize spacing */
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 200 !important; /* Higher than other elements */
+    pointer-events: auto !important; /* Force pointer events */
+  }
+  
+  .home-content .cta-button {
+    margin: 0;
+    flex: 1 1 0; /* Allow growing and shrinking equally */
+    padding: clamp(6px, 1vw, 10px) clamp(8px, 1.5vw, 15px);
+    font-size: clamp(0.7rem, 0.8vw + 0.3rem, 0.85rem);
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
+    overflow: visible; /* Make sure overflow doesn't hide clickable areas */
+    text-overflow: ellipsis; /* Show ellipsis for truncated text */
+    min-width: 80px !important; /* Minimum width to ensure clickability */
+    flex-shrink: 0 !important; /* Prevent shrinking too much */
+    position: relative !important; /* Ensure proper positioning */
+    z-index: 250 !important; /* Even higher z-index */
+    pointer-events: auto !important; /* Force pointer events */
+  }
+
+  .projects-section h2 {
+    text-align: left; /* Align the heading to the left */
+    margin-left: 5%; /* Add spacing from the left edge */
+    width: auto; /* Ensure it doesn't stretch unnecessarily */
+  }
+
+  /* More specific selector */
+  .projects-section > h2 {
+    text-align: left !important; /* Force left alignment */
+    margin-left: 5% !important; /* Force left margin */
+    margin-right: auto !important; /* Clear any right margin */
+    width: auto !important; /* Force auto width */
+    display: block !important; /* Ensure block display */
+    position: relative !important; /* Ensure proper positioning */
+  }
+
+
+  h2.projects-heading,
+  .projects-section h2 {
+    text-align: left !important;
+    margin-left: 5% !important;
+    margin-right: auto !important;
+    width: auto !important;
+    display: block !important;
+    position: relative !important;
+    color: #f0a500 !important; /* Change color temporarily to verify the style is applied */
+  }
+
+  /* Target the projects heading directly and reset everything */
+  h2.projects-heading {
+    display: block !important;
+    position: static !important; /* Remove any positioning */
+    float: none !important; /* Remove any floating */
+    transform: none !important; /* Remove any transformations */
+    text-align: left !important;
+    margin: -50px 0 20px -50% !important; /* Top, right, bottom, left */
+    padding: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    left: 0 !important;
+    right: auto !important;
+    color: #fff !important; /* The color change worked, so keeping it */
+    clear: both !important; /* Clear any floats */
+  }
+
+  /* Also target the container to ensure it doesn't interfere */
+  .projects-section {
+    display: block !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  .project-info {
+    min-width: 200px;
+    width: 90%; /* Shrink the width slightly for smaller screens */
+    max-width: none; /* Remove the maximum width constraint */
+    padding: 20px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align text for smaller screens */
+    flex-direction: row; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem; /* Adjust font size for the title */
+    margin-bottom: 10px; /* Add spacing below the title */
+  }
+
+  .project-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-info p {
+    font-size: 1rem; /* Adjust font size for the description */
+    margin: 0; /* Remove unnecessary margins */
+  }
+
+  /* Make images fill their containers completely */
+  .project-image {
+    width: 100% !important; /* Full width */
+    height: 100% !important; /* Full height */
+    object-fit: cover !important; /* Cover the container */
+    object-position: center !important; /* Center the image */
+    margin: 0 !important; /* Remove any margins */
+    border-radius: 0 !important; /* Remove border radius */
+    position: absolute !important; /* Position absolutely within container */
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  
+  /* Ensure the project card acts as a positioning context */
+  .project-card {
+    position: relative !important;
+    padding: 0 !important; /* Remove padding */
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .home-container {
+    padding-bottom: 1400px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1 span {
+    font-size: 1.5rem;
+  }
+
+  .availability {
+    top: 65px;
+    left: 20px;
+  }
+
+  .date-circle {
+    width: 80px;
+    height: 80px;
+    padding: 5px; /* Reduce padding to give more space for content */
+  }
+
+  .date {
+    font-size: 1.2rem; /* Further reduced from 1.2rem */
+    margin-bottom: 1px; /* Minimal spacing */
+    line-height: 0.9; /* Even tighter line height */
+  }
+
+  .availability-text {
+    font-size: 0.45rem; /* Much smaller text */
+    margin-top: 1px; /* Minimal spacing */
+    line-height: 0.9; /* Tighter line height */
+    max-width: 95%; /* Use almost all available width */
+    word-break: break-word; /* Force word breaks if needed */
+    hyphens: auto; /* Enable hyphenation */
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .home-container {
+    padding-bottom: 900px; /* Reduced padding for smaller screens */
+  }
+  
+  .home-content h1,
+  .home-content p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .home-content .cta-button {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .home-content .button-container {
+    flex-wrap: wrap; /* Allow wrapping on very small screens if necessary */
+  }
+  
+  .home-content .cta-button {
+    padding: clamp(6px, 1vw, 10px) clamp(8px, 1.5vw, 15px);
+    font-size: clamp(0.7rem, 0.8vw + 0.3rem, 0.85rem);
+  }
+
+  .creative-text {
+    top: calc(65px + 80px + -30px); /* Adjusted for smallest circle */
+    width: 160px;
+    left: 61px;
+  }
+  
+  .creative-text svg {
+    width: 160px;
+    height: 60px;
+  }
+  
+  .creative-text .curved-text {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+  }
+
+  .curved-text {
+    width: 80px;
+    height: 20px;
+  }
+  
+  .curved-text span {
+    font-size: 1.2rem;
+    width: 80px;
+    transform-origin: center 30px;
+    transform: translate(-50%, -50%) rotate(0deg) translateY(30px);
+  }
+  
+  /* Update individual character positions */
+  .curved-text span:nth-child(1) { left: 8%; transform: rotate(-28deg) translateY(30px); }
+  .curved-text span:nth-child(2) { left: 22%; transform: rotate(-21deg) translateY(30px); }
+  .curved-text span:nth-child(3) { left: 36%; transform: rotate(-14deg) translateY(30px); }
+  .curved-text span:nth-child(4) { left: 50%; transform: rotate(-7deg) translateY(30px); }
+  .curved-text span:nth-child(5) { left: 64%; transform: rotate(0deg) translateY(30px); }
+  .curved-text span:nth-child(6) { left: 78%; transform: rotate(7deg) translateY(30px); }
+  .curved-text span:nth-child(7) { left: 92%; transform: rotate(14deg) translateY(30px); }
+  .curved-text span:nth-child(8) { left: 106%; transform: rotate(21deg) translateY(30px); }
+
+  .creative h1{
+    top: calc(80px + 200px + -125px); /* Circle top + circle height + spacing */
+    left: 110px;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    line-height: 1.2; /* Adjusted for better spacing */
+  }
+  
+  /* Adjust the spans inside the h1 */
+  .creative h1 span {
+    transform: scaleY(1.5); /* Less vertical stretching on mobile */
+    line-height: .7;
+  }
+  
+  /* Adjust the ampersand on small screens */
+  .creative h1 .ampersand {
+    font-size: 1.2rem;
+    top: 10px;
+  }
+
+.project-card, .project-info1, .project-info3, .project-info2, .project-card.project-right, .project-wrapper .project-card.project-left, .project-wrapper .project-card.project-center {
+  right: 0;
+  left: 0;
+  margin: 0;
+}
+
+.project-wrapper {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  width: fit-content;
+  max-width: fit-content !important;
+  padding: 0 0 0 30px;
+}
+
+.project-info {
+  min-width: 150px;
+}
+
+.project-info1, .project-info3 {
+  margin-left: 20px;
+  margin-right: 0;
+  justify-content: flex-start;
+}
+
+  h2.projects-heading {
+      text-wrap: auto;
+      display: block !important;
+      position: static !important;
+      float: none !important;
+      transform: none !important;
+      text-align: center !important;
+      margin: -75px 0 20px -20% !important;
+      padding: 0 !important;
+      width: 120px !important;
+      max-width: 120px !important;
+      left: 0 !important;
+      right: auto !important;
+      color: #fff !important;
+      clear: both !important;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    top: 130px;
+    font-size: 2rem;
+  }
+}
+
+h2.projects-heading {
+  text-shadow: 
+  0 0 10px #f0a500,
+  0 0 20px #f0a500,
+  0 0 30px #f0a500,
+  0 0 45px #f0a500,
+  0 0 60px #f0a500,
+  0 0 80px #f0a500;
+  color: #fff; /* Always white text */
+  font-size: 2.5rem; /* Adjust font size if needed */
+  font-weight: bold; /* Ensure bold text for better glow effect */
+  text-transform: uppercase; /* Always uppercase */
+  text-align: center; /* Center the text */
+  margin: 20px auto 30px auto; /* Center the heading with spacing */
+  display: block; /* Ensure it behaves as a block element */
+font-weight: bold;
+}

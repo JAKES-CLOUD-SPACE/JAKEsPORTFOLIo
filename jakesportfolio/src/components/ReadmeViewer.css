@@ -1,0 +1,89 @@
+.readme-section {
+  background-color: transparent;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.readme-container {
+  background-color: transparent;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 8px; 
+  margin: 40px auto;
+  color: white;
+}
+
+.back-link {
+  display: inline-block;
+  background-color: #f0a500;
+  color: white;
+  padding: 8px 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  box-shadow: 
+    0 0 15px 5px rgba(240, 165, 0, 0.7),
+    0 0 30px 10px rgba(240, 165, 0, 0.5),
+    0 0 45px 20px rgba(240, 165, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.readme-content {
+  padding: 20px;
+  border-radius: 4px;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-height: 800px;
+  white-space: normal; /* Changed from pre-wrap to normal */
+  font-family: sans-serif; /* Changed from monospace for better readability */
+  word-wrap: break-word;
+  word-break: break-word; /* Changed from break-all for better readability */
+  overflow-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style pre and code blocks specially */
+.readme-content pre {
+  white-space: pre-line; /* Better for code blocks */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: hidden;
+  font-family: monospace;
+  width: 100%;
+}
+
+.readme-content code {
+  font-family: monospace;
+  padding: 2px 4px;
+  border-radius: 2px;
+  word-wrap: break-word;
+  white-space: normal; /* Changed to normal */
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Handle tables in readme if any */
+.readme-content table {
+  width: 100%;
+  table-layout: fixed; /* Forces table to respect container width */
+  border-collapse: collapse;
+}
+
+.readme-content td, .readme-content th {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.error {
+  color: #ff6b6b;
+}

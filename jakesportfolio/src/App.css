@@ -8,16 +8,10 @@
 
 .logo {
   height: 6em;
-  padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
 
 @keyframes logo-spin {
   from {
@@ -51,16 +45,24 @@ section {
 }
 
 footer {
-  background: #333;
-  color: white;
+  color: #fff;
   padding: 20px;
-width: 100%;
+  width: 100%;
+  text-shadow: 
+    1px 1px 25px #f0a500;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: auto; /* Ensures footer stays at bottom */
 }
 
 footer a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   margin-right: 10px;
+  text-shadow: 
+    1px 1px 25px #f0a500;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
 .project {
@@ -96,8 +98,21 @@ h1, h2 {
 a {
   text-decoration: none;
   color: inherit;
+  
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Set Spinwerad as the default font for the App component */
+.App {
+  font-family: 'Spinwerad', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use viewport height */
+}
+
+main {
+  flex: 1; /* Allow main content to grow and push footer down */
 }

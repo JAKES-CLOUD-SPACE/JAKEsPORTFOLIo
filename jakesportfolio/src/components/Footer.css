@@ -1,55 +1,91 @@
+/* Ensure the page container takes up the full viewport height */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and take up available space */
+}
+
 footer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.footer-links {
+  display: flex; 
+  gap: 20px; 
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f4f4f4; 
+}
+
+.footer-text {
+  font-size: 1rem;
+  text-align: right;
+  color: white;
+  text-shadow: 
+    0 0 7px #f0a500,
+    0 0 15px #f0a500,
+    0 0 30px #f0a500,
+    0 0 45px #f0a500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
+p {
+  color: white;
+  text-shadow: 
+    0 0 7px #f0a500,
+    0 0 15px #f0a500,
+    0 0 30px #f0a500,
+    0 0 45px #f0a500;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column; 
     align-items: center;
-    padding: 20px;
-    background-color: #354f52;
-    color: white;
-    width: 100%;
-    box-sizing: border-box; 
   }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; 
-  }
-  
+
   .footer-links {
-    display: flex; 
-    gap: 20px; 
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 20px; 
   }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #f4f4f4; 
-  }
-  
+
   .footer-text {
-    font-size: 1rem;
-    text-align: right;
+    text-align: center;
   }
-  
-  @media screen and (max-width: 768px) {
-    footer {
-      flex-direction: column; 
-      align-items: center;
-    }
-  
-    .footer-links {
-      flex-direction: column; 
-      gap: 10px;
-      margin-bottom: 20px; 
-    }
-  
-    .footer-text {
-      text-align: center;
-    }
-  }
-  
+}

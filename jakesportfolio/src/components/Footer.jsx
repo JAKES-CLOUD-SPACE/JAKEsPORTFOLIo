@@ -17,12 +17,19 @@ const Footer = () => {
 
           <Link to="https://open.spotify.com/user/vu80z36xzf7l3qm7d4cvnit55?si=593a7e8e5bce4ffb" target="_blank">   
           <img 
-              src={"/Spotify_Primary_Logo_RGB_Black.png"} 
+              src={"/spotify-icon-2.png"} 
               alt="Spotify Logo" 
               style={{ width: '80px', height: '80px', objectFit: 'contain' }}
             />
             </Link>
 
+          <Link to="https://www.linkedin.com/in/jake-ringate-b590b334b/" target="_blank">   
+          <img 
+              src={"/linkedin-icon-2.png"} 
+              alt="Linkedin Logo" 
+              style={{ width: '80px', height: '80px', objectFit: 'contain' }}
+            />
+            </Link>
         </div>
         <div className="footer-text">
           <p>© 2025 Jake Ringate's Portfolio</p>

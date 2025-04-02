@@ -5,7 +5,7 @@ const Resume = () => {
     <section className="resume-section">
     <section className="resume-container">
       <h1>My Resume</h1>
-      <a href="/resume2025.pdf" download>You Can Download My Resume Here</a>
+      <a className='resume-link' href="/resume2025.pdf" download>You Can Download My Resume Here</a>
       <iframe 
         src="/resume2025.pdf" 
         width="100%" 

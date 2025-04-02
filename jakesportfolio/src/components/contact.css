@@ -1,15 +1,43 @@
 --adding css for contact page
 .resume-section {
-    background-color: #354f52;
+    background-color: transparent;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .resume-link {
+    background-color: #f0a500;
+    padding: 5px;
+  }
+
+  h1 {
+    color: white;
+    transform: scale(1.02);
+    text-shadow: 
+    0 0 10px #f0a500,
+    0 0 20px #f0a500,
+    0 0 30px #f0a500,
+    0 0 45px #f0a500,
+    0 0 60px #f0a500,
+    0 0 80px #f0a500; /* Added extra layers for more intense glow */
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .resume-link:hover {
+    box-shadow: 
+    0 0 15px 5px rgba(240, 165, 0, 0.7),
+    0 0 30px 10px rgba(240, 165, 0, 0.5),
+    0 0 45px 20px rgba(240, 165, 0, 0.3); /* Three-layer glow effect */
+  transform: scale(1.02);
+  color: black;
+  }
   
   .resume-container {
-    background-color: #2f3e46;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     padding: 30px;
     max-width: 1000px;
     width: 100%;
@@ -19,31 +47,156 @@
 
 
 .contact-section {
-    background-color: #354f52;
+    background-color: transparent;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: #f0a500;
   }
   
   .contact-container {
-    background-color: #2f3e46;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
+    background-color: transparent;
+    color: #fff;
     padding: 30px;
     max-width: 600px;
     width: 100%;
     border-radius: 8px; 
   }
   
-  h3 {
-    font-size: 2rem;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
+  .contact-container-about-me {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px;
+    padding: 30px;
   }
-  
+
+  /* Header takes full width and stays centered */
+  .contact-container-about-me h1 {
+    width: 100%; /* Full width */
+    flex-basis: 100%; /* Take full row */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Text paragraph on the left */
+  .contact-container-about-me p {
+    flex: 1; /* Take available space */
+    min-width: 300px; /* Minimum width */
+    max-width: 45%; /* Maximum width */
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    order: 1; /* Position in the flex layout */
+  }
+
+  /* Image on the right */
+  .contact-container-about-me img {
+    flex: 1; /* Take available space */
+    max-width: 45%; /* Maximum width */
+    height: auto;
+    object-fit: contain;
+    order: 2; /* Position in the flex layout */
+  }
+
+  /* Layout for the paragraph boxes container */
+  .paragraph-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+    max-width: 45%;
+    order: 1;
+  }
+
+  /* Styling for each paragraph box */
+  .paragraph-box {
+    background-color: rgba(240, 164, 0, 0.665); /* Light amber/orange background */
+    border: 2px solid #f0a500;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 
+      0 0 15px 5px rgba(240, 165, 0, 0.7),
+      0 0 30px 10px rgba(240, 165, 0, 0.5),
+      0 0 45px 20px rgba(240, 165, 0, 0.3); /* Glowing effect */
+    transition: all 0.3s ease;
+  }
+
+  /* Paragraph text inside boxes */
+  .paragraph-box p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    text-shadow: none; /* Remove glow from text */
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-container-about-me {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-container-about-me p,
+    .contact-container-about-me img {
+      max-width: 100%;
+      order: 0; /* Reset order for mobile */
+    }
+
+    .paragraph-boxes,
+    .contact-container-about-me img {
+      max-width: 100%;
+      order: 0;
+    }
+    
+    .paragraph-box {
+      padding: 15px;
+    }
+    
+    .paragraph-box p {
+      font-size: 1rem;
+    }
+  }
+
+  .contact-container p {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-shadow: 0 0 7px #f0a500, 0 0 15px #f0a500;
+    margin: 20px 0;
+    display: block;
+    max-width: 100%;
+    opacity: 1;
+  }
+
+  #contact h1 {
+    color: white;
+    text-shadow: 
+    0 0 10px #f0a500,
+    0 0 20px #f0a500,
+    0 0 30px #f0a500,
+    0 0 45px #f0a500,
+    0 0 60px #f0a500,
+    0 0 80px #f0a500; /* Added extra layers for more intense glow */
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -68,11 +221,21 @@
     border-radius: 4px;
     width: 100%;
     transition: border-color 0.3s;
+    background-color: white; /* Added white background */
+    color: black; /* Added black text color */
   }
   
   input:focus, textarea:focus {
-    border-color: #0056b3;
+    border-color: #f0a500;
     outline: none;
+    box-shadow: 
+    0 0 15px 5px rgba(240, 165, 0, 0.7),
+    0 0 30px 10px rgba(240, 165, 0, 0.5),
+    0 0 45px 20px rgba(240, 165, 0, 0.3);
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #666; /* Dark gray for placeholder text */
   }
   
   textarea {
@@ -82,19 +245,26 @@
   
   .submit-btn {
     padding: 12px 20px;
-    background-color: #02652b;
+    background-color: #f0a500;
     color: white;
     font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
     align-self: center; 
+    margin: 0 auto;
+    display: block;
   }
   
   .submit-btn:hover {
-    background-color: #004080; 
+    background-color: #f0a500;
+    box-shadow: 
+      0 0 15px 5px rgba(240, 165, 0, 0.7),
+      0 0 30px 10px rgba(240, 165, 0, 0.5),
+      0 0 45px 20px rgba(240, 165, 0, 0.3); /* Three-layer glow effect */
+    transform: scale(1.02);
   }
 
   @media (max-width: 768px) {
@@ -120,4 +290,39 @@
       padding: 10px 18px;
     }
   }
-  
+
+  .status-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .success {
+    background-color: rgba(0, 128, 0, 0.653);
+    color: #fff;
+  }
+
+  .error {
+    background-color: rgba(255, 0, 0, 0.628);
+    color: #fff;
+  }
+
+  .error-message {
+    background-color: rgba(255, 4, 4, 0.452);
+    width: 40%;
+    color: #fff;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+  }
