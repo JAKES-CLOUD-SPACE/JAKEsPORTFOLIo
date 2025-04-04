@@ -1014,6 +1014,35 @@ p {
   .project-wrapper .project-card.project-left, .project-wrapper .project-card.project-right, .project-wrapper .project-card.project-center {
       width: auto !important;
   }
+
+  /* Add background rotation */
+  body {
+    position: relative;
+    background-image: none !important; /* Remove original background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Create pseudo-element with rotated background */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: -720px;
+    width: 500%;
+    height: 100%;
+    z-index: -1; /* Place behind all content */
+    background-image: url('/greekgods2.webp'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
+  
+  /* Adjust container for better vertical spacing after rotation */
+  .home-container {
+    padding-bottom: 800px !important; /* Adjust spacing for rotated background */
+  }
 }
 
 @media (max-width: 480px) {
