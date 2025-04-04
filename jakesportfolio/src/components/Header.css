@@ -215,11 +215,16 @@ nav.nav-open {
     
     .nav-list a {
       width: 100%;
-      font-size: .9rem; /* Further reduce font size for very small screens */
+      font-size: .8rem; /* Further reduce font size for very small screens */
       padding: 10px 12px; /* Adjust padding for very small screens */
           }
   }
 }
+
+@media screen and (max-width: 500px) {
+  nav {
+    right: 20%;
+  }}
 
 /* Apply this behavior only for specific media queries */
 @media (max-width: 1028px) {
