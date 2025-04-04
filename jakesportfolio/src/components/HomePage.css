@@ -1043,6 +1043,16 @@ p {
   .home-container {
     padding-bottom: 800px !important; /* Adjust spacing for rotated background */
   }
+  .home-content .cta-button {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    margin: 0 !important;
+    background-color: #f0a500 !important; /* Gold background */
+    color: #000 !important; /* Black text for contrast */
+    border-color: #f0a500 !important; /* Match border to background */
+    box-shadow: 0 0 15px 5px rgba(240, 165, 0, 0.7) !important; /* Add glow effect */
+  }
 }
 
 @media (max-width: 480px) {
