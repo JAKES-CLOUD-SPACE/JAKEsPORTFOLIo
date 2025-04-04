@@ -904,6 +904,118 @@ p {
 
 }
 
+@media (max-width: 600px) {
+  /* Reposition home content to be full width and below design/dev text */
+  .home-content {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    margin-top: 220px !important; /* Add space below Designer & Developer text */
+    padding: 0 20px !important; /* Add horizontal padding */
+    box-sizing: border-box !important;
+  }
+  
+  /* Make paragraph take full width */
+  .home-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    margin-bottom: 30px !important;
+    word-wrap: break-word !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* Adjust creative h1 position to ensure proper stacking */
+  .creative h1 {
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+    font-size: 2rem !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 5 !important;
+  }
+  
+  /* Adjust button container for better mobile display */
+  .home-content .button-container {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  
+  .home-content .cta-button {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* Center the projects section */
+  .projects-section {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    display: block !important;
+    position: static !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  
+  .projects-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+  
+  .project-wrapper {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 auto 30px auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .project-card.project-left,
+  .project-card.project-right,
+  .project-card.project-center {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 15px auto !important;
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  .project-info {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  h2.projects-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    margin: 40px auto 30px auto !important;
+    position: static !important;
+    left: auto !important;
+  }
+  .project-wrapper .project-card.project-left, .project-wrapper .project-card.project-right, .project-wrapper .project-card.project-center {
+      width: auto !important;
+  }
+}
+
 @media (max-width: 480px) {
   .home-content h1 {
     top: 130px;
