@@ -12,7 +12,8 @@ const Header = () => {
   return (
     <header>
       <div className="header-top">
-        <div className="logo">Jake Ringate</div>
+        {/* Add a conditional class to the logo */}
+        <div className={`logo ${menuOpen ? "invisible" : ""}`}>Jake Ringate</div>
         <div className="menu-toggle" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>

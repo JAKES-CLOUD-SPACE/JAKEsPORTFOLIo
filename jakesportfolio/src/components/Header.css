@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Spinwerad';
   src: url('/spinwerad/spinwerad.ttf') format('truetype');
@@ -57,6 +56,15 @@ header::after {
   letter-spacing: 1px;
   padding-top: 0;
   text-transform: none;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Make the logo invisible when the menu is open */
+.logo.invisible {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Show menu toggle button always */
@@ -129,12 +137,14 @@ nav.nav-open {
   font-weight: 400;
   text-transform: uppercase;
   transition: color 0.3s ease;
-  padding: 0px 15px 35px; /* Added padding to increase clickable area */
-  display: inline-block; /* Ensures padding works properly */
+  padding: 10px 20px; /* Increase padding for a larger clickable area */
+  display: inline-block; /* Ensure padding works properly */
+  border-radius: 5px; /* Add slight rounding for better usability */
 }
 
 .nav-list a:hover {
   color: #f0a500; /* Highlight color on hover */
+  background-color: rgba(240, 165, 0, 0.2); /* Add a subtle background highlight */
 }
 
 /* Media query for screens below 700px */
@@ -147,6 +157,11 @@ nav.nav-open {
   .nav-list {
     gap: 10px; /* Reduced space between links (from 40px) */
     flex-wrap: nowrap; /* Prevent automatic wrapping */
+  }
+  
+  .nav-list a {
+    font-size: 1.2rem; /* Slightly smaller font size for smaller screens */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
   }
   
   /* When screen gets narrower, reduce gap further */
@@ -162,20 +177,39 @@ nav.nav-open {
   /* When screen gets too narrow for horizontal layout */
   @media screen and (max-width: 650px) {
     nav {
-      top: 60px;
-      right: 15px; /* Only adjust position when vertical */
+      right: 20%;
       min-width: 150px; /* Narrower for vertical layout */
     }
     
     .nav-list {
-      flex-direction: column; /* Stack links vertically */
-      align-items: flex-end; /* Align items to the right */
-      gap: 4px; /* Adjust spacing for vertical layout */
+      gap: 2px; /* Adjust spacing for vertical layout */
+    }
+    
+    .nav-list a {
+      font-size: 1rem; /* Further reduce font size for very small screens */
+      padding: 10px 12px; /* Adjust padding for very small screens */
     }
   }
-  
-  .nav-list a {
-    font-size: 0.8rem; /* Slightly smaller font size */
-    white-space: nowrap; /* Prevent text wrapping within links */
+}
+
+/* Apply this behavior only for specific media queries */
+@media (max-width: 1028px) {
+  .logo.invisible {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo.invisible {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo.invisible {
+    visibility: hidden;
+    opacity: 0;
   }
 }
