@@ -105,7 +105,7 @@ nav {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  z-index: 5;
+  z-index: 20; /* Increase z-index to ensure it's above other elements */
   transform: translateX(30px); /* Move from right instead of top */
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -129,25 +129,49 @@ nav.nav-open {
 .nav-list li {
   margin: 0;
   padding: 0;
+  display: block; /* Ensure full clickable area */
 }
 
+/* Improve navigation link clickability */
 .nav-list a {
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
   font-weight: 400;
   text-transform: uppercase;
-  transition: color 0.3s ease;
-  padding: 10px 20px; /* Add padding for a larger clickable area */
-  display: inline-block; /* Ensure the entire padded area is clickable */
-  border-radius: 5px; /* Add slight rounding for better usability */
-  text-align: center; /* Center-align the text */
-  line-height: 1.5; /* Ensure proper vertical alignment */
+  transition: all 0.3s ease;
+  padding: 15px 25px; /* Increased padding for larger clickable area */
+  display: block; /* Changed from inline-block to block for better clickability */
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0; /* Remove any margins */
+  position: relative; /* Add position context for hover effect */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
+/* Enhanced hover effect for better visual feedback */
 .nav-list a:hover {
-  color: #f0a500; /* Highlight color on hover */
-  background-color: rgba(240, 165, 0, 0.2); /* Add a subtle background highlight */
+  color: #f0a500;
+  background-color: rgba(240, 165, 0, 0.2);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Add subtle indicator to show active/hover state */
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  width: 0;
+  height: 2px;
+  background-color: #f0a500;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 50%; /* Grow the indicator on hover */
 }
 
 /* Media query for screens below 700px */
@@ -187,12 +211,13 @@ nav.nav-open {
     
     .nav-list {
       flex-wrap: nowrap;
-    }
+          }
     
     .nav-list a {
-      font-size: .8rem; /* Further reduce font size for very small screens */
+      width: 100%;
+      font-size: .9rem; /* Further reduce font size for very small screens */
       padding: 10px 12px; /* Adjust padding for very small screens */
-    }
+          }
   }
 }
 
