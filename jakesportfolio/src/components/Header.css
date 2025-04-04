@@ -119,8 +119,8 @@ nav.nav-open {
 .nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row; /* Display links horizontally */
-  gap: 40px; /* Maintaining the original spacing */
+  flex-direction: row; /* Ensure horizontal layout */
+  gap: 20px; /* Space between buttons */
   margin: 0;
   padding: 0;
   justify-content: flex-end; /* Align links to the right */
@@ -128,6 +128,7 @@ nav.nav-open {
 
 .nav-list li {
   margin: 0;
+  padding: 0;
 }
 
 .nav-list a {
@@ -137,9 +138,11 @@ nav.nav-open {
   font-weight: 400;
   text-transform: uppercase;
   transition: color 0.3s ease;
-  padding: 10px 20px; /* Increase padding for a larger clickable area */
-  display: inline-block; /* Ensure padding works properly */
+  padding: 10px 20px; /* Add padding for a larger clickable area */
+  display: inline-block; /* Ensure the entire padded area is clickable */
   border-radius: 5px; /* Add slight rounding for better usability */
+  text-align: center; /* Center-align the text */
+  line-height: 1.5; /* Ensure proper vertical alignment */
 }
 
 .nav-list a:hover {
@@ -177,16 +180,17 @@ nav.nav-open {
   /* When screen gets too narrow for horizontal layout */
   @media screen and (max-width: 650px) {
     nav {
-      right: 20%;
+      right: 15%;
+      width: auto;
       min-width: 150px; /* Narrower for vertical layout */
     }
     
     .nav-list {
-      gap: 2px; /* Adjust spacing for vertical layout */
+      flex-wrap: nowrap;
     }
     
     .nav-list a {
-      font-size: 1rem; /* Further reduce font size for very small screens */
+      font-size: .8rem; /* Further reduce font size for very small screens */
       padding: 10px 12px; /* Adjust padding for very small screens */
     }
   }
